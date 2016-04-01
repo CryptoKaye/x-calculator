@@ -1,0 +1,22 @@
+<resources>
+    <!-- APP name -->
+    <string name="app_name">X计算器</string>
+
+    <!-- help -->
+    <string name="help_1">Q: 进入新世界的初始密码是什么？\nA: 初始的真实密码是：94694694666然后按等号，初始的伪密码是：44944然后按等号。都是谐音很好记啦~\n</string>
+    <string name="help_2">Q: 计算器的功能完整吗？\nA: 基本的加减乘除还是可以的~当然如果你想完成更加高深的计算，这个计算器就不适合啦~\n</string>
+    <string name="help_3">Q: 修改密码后忘记了怎么办QAQ？\nA: 那就只好重新下载安装啦~\n</string>
+    <string name="help_4">Q: 任何字符都可以转化为二维码吗？\nA: 讲道理的话，是这样的QAQ~\n</string>
+    <string name="help_5">Q: 二维码会存在手机里吗？\nA: 当前生成的二维码会存储在DriverCode的文件夹下，之前的二维码会出现在系统相册中，需要的话请定时清理~\n</string>
+    <string name="help_6">Q: 二维码的一键分享功能在哪？\nA: 在QR Code界面右上角的菜单里~\n</string>
+    <string name="help_7">Q: 莫尔斯码翻译器怎么用？\nA: 把想转为莫尔斯码的字符串（只允许字母、数字和常见符号）输入到输入框中，点击“转换为莫尔斯码”即转换成功，结果将自动复制到剪贴板中；想把莫尔斯码再转化回来的话，就把莫尔斯码复制粘贴到输入框中，点击“莫尔斯码翻译”，即可还原为字符串~\n</string>
+    <string name="help_8">Q: 发现了BUG想要反馈去哪呢QAQ?\nA: 点击设置界面的“关于”就能找到作者的联系方式啦，欢迎勾搭~</string>
+    
+    <!-- me -->
+    <string name="version">当前版本：v2.5.0</string>
+    <string name="feedback">反馈：zskcontribute@gmail.com</string>
+    <string name="copyright">Copyright XCalculator 2016</string>
+    <string name="me">Shine Kaye.All Rights Reserved.</string>
+
+
+</resources>

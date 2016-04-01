@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.driver.shinekaye.olddriver">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".CalculatorActivity"
+            android:label="X计算器">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".NewWorldActivity"
+            android:label="New World">
+
+        </activity>
+        <activity android:name=".ZXingActivity"
+            android:label="QR Code">
+
+        </activity>
+        <activity android:name=".StartQRCodeActivity"
+            android:label="QR Code">
+
+        </activity>
+        <activity android:name=".MorseActivity"
+            android:label="Morse Translate">
+
+        </activity>
+        <activity android:name=".FakeActivity"
+            android:label="New World">
+
+        </activity>
+        <activity android:name=".SettingsActivity"
+            android:label="Settings">
+
+        </activity>
+        <activity android:name=".PasswordActivity"
+            android:label="Change True Password"
+            android:theme="@android:style/Theme.Material.Dialog">
+
+        </activity>
+        <activity android:name=".FakePasswordActivity"
+            android:label="Change Fake Password"
+            android:theme="@android:style/Theme.Material.Dialog">
+
+        </activity>
+        <activity android:name=".HelpActivity"
+            android:label="Help">
+
+        </activity>
+        <activity android:name=".AboutActivity"
+            android:theme="@style/Theme.AppCompat.Dialog.Alert"
+            android:label="About">
+
+        </activity>
+    </application>
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" ></uses-permission>
+
+</manifest>

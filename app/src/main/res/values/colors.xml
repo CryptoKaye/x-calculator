@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--基础色 -->
+    <color name="colorPrimary">#0D131E</color>
+
+    <!--基础深色 -->
+    <color name="colorPrimaryDark">#04060C</color>
+
+    <!--基础ICON色 -->
+    <color name="colorAccent">#222A39</color>
+
+    <!--基础Button色 -->
+    <color name="buttonColor">#30394D</color>
+
+    <!--Button文字色 -->
+    <color name="buttonText">#858990</color>
+
+    <!--标题文字色 -->
+    <color name="colorText">#212121</color>
+
+    <!--下属文字色 -->
+    <color name="colorSeconText">#727272</color>
+
+    <!--分割线色 -->
+    <color name="colorDivider">#B6B6B6</color>
+
+    <!--基础浅色 -->
+    <color name="colorPrimaryLight">#FFF9C4</color>
+
+    <!--白色 -->
+    <color name="white">#fff</color>
+
+    <!--黑色 -->
+    <color name="black">#000</color>
+</resources>
