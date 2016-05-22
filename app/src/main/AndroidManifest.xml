@@ -9,7 +9,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CalculatorActivity"
-            android:label="X计算器">
+            android:label="X计算器"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,49 +18,81 @@
             </intent-filter>
         </activity>
         <activity android:name=".NewWorldActivity"
-            android:label="New World">
+            android:label="New World"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".ZXingActivity"
-            android:label="QR Code">
+            android:label="QR Code"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".StartQRCodeActivity"
-            android:label="QR Code">
+            android:label="QR Code"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".MorseActivity"
-            android:label="Morse Translate">
+            android:label="Morse Translate"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".FakeActivity"
-            android:label="New World">
+            android:label="New World"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".SettingsActivity"
-            android:label="Settings">
+            android:label="Settings"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".PasswordActivity"
             android:label="Change True Password"
-            android:theme="@android:style/Theme.Material.Dialog">
+            android:theme="@android:style/Theme.Material.Dialog"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".FakePasswordActivity"
             android:label="Change Fake Password"
-            android:theme="@android:style/Theme.Material.Dialog">
+            android:theme="@android:style/Theme.Material.Dialog"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".HelpActivity"
-            android:label="Help">
+            android:label="Help"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".AboutActivity"
             android:theme="@style/Theme.AppCompat.Dialog.Alert"
-            android:label="About">
+            android:label="About"
+            android:screenOrientation="portrait">
+
+        </activity>
+        
+        <activity android:name=".AddContent"
+            android:screenOrientation="portrait"
+            android:label="Add Content">
+            
+        </activity>
+        
+        <activity android:name=".SecretAlbumActivity"
+            android:screenOrientation="portrait"
+            android:label="Secret Album">
+
+
+        </activity>
+
+        <activity android:name=".SelectActivity"
+            android:screenOrientation="portrait"
+            android:label="Detail">
+
 
         </activity>
     </application>
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" ></uses-permission>
+
+
 
 </manifest>

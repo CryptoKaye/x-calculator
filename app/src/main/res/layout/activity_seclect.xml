@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="5">
+
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:visibility="gone"
+        android:id="@+id/s_img"/>
+
+    <VideoView
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:id="@+id/s_video"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/s_text"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        android:text="tv"
+        android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="bottom">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除"
+            android:id="@+id/s_delete"
+            android:layout_weight="1"
+            android:textColor="@color/buttonText"
+            android:textSize="25sp"
+            android:background="@color/buttonColor"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:id="@+id/s_back"
+            android:layout_weight="1"
+            android:textColor="@color/buttonText"
+            android:textSize="25sp"
+            android:background="@color/buttonColor"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

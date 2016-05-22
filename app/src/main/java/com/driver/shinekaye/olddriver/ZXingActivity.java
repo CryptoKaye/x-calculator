@@ -1,8 +1,11 @@
 package com.driver.shinekaye.olddriver;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -17,11 +20,14 @@ import com.google.zxing.EncodeHintType;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
+import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Hashtable;
+import java.util.Random;
 
 /**
  * Created by Shine Kaye on 2016/3/26.
@@ -35,6 +41,7 @@ public class ZXingActivity extends AppCompatActivity {
     ImageView result;
     Bitmap resultBitmap;
     MakeQRCodeUtil mc = new MakeQRCodeUtil();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,8 +66,7 @@ public class ZXingActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId())
-        {
+        switch (item.getItemId()) {
             case 0:
                 sendToFriends();
                 break;
@@ -68,7 +74,7 @@ public class ZXingActivity extends AppCompatActivity {
         return true;
     }
 
-    public class MakeQRCodeUtil{
+    public class MakeQRCodeUtil {
         //根据指定内容生成自定义宽高的二维码图片
         public Bitmap makeQRImage(String content, int width, int height)
                 throws WriterException {
@@ -78,11 +84,20 @@ public class ZXingActivity extends AppCompatActivity {
                     , width, height, hints);
             int[] pixels = new int[width * height];
             for (int y = 0; y < height; y++) {
-                for (int x = 0; x <width; x++) {
-                    if (bitMatrix.get(x, y)){
-                        pixels[y * width + x] = 0xff000000;
+                for (int x = 0; x < width; x++) {
+                    if (bitMatrix.get(x, y)) {
+                        if (x < width / 2 && y < height / 2) {
+                            pixels[y * width + x] = 0xFF0094FF;// 蓝色
+                            Integer.toHexString(new Random().nextInt());
+                        } else if (x < width / 2 && y > height / 2) {
+                            pixels[y * width + x] = 0xFFFED545;// 黄色
+                        } else if (x > width / 2 && y > height / 2) {
+                            pixels[y * width + x] = 0xFF5ACF00;// 绿色
+                        } else {
+                            pixels[y * width + x] = 0xFF000000;// 黑色
+                        }
                     } else {
-                        pixels[y * width + x] = 0xffffffff;
+                        pixels[y * width + x] = 0xffffffff;// 白色
                     }
                 }
             }
@@ -90,6 +105,8 @@ public class ZXingActivity extends AppCompatActivity {
             bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
             return bitmap;
         }
+
+
         //保存到相册
         public void saveImageToGallery(Context context, Bitmap bmp) {
             File appDir = new File(Environment.getExternalStorageDirectory(), "DriverCode");
@@ -118,13 +135,15 @@ public class ZXingActivity extends AppCompatActivity {
             Toast.makeText(ZXingActivity.this, "图片已保存到:" + file, Toast.LENGTH_LONG).show();
         }
     }
+
     //分享到朋友圈
     private void sendToFriends() {
-        Intent intent=new Intent(Intent.ACTION_SEND);
-        Uri imageUri= Uri.parse(Environment.getExternalStorageDirectory()+"/DriverCode/QRcode.jpg");
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        Uri imageUri = Uri.parse(Environment.getExternalStorageDirectory() + "/DriverCode/QRcode.jpg");
         intent.setType("image/*");
         intent.putExtra(Intent.EXTRA_STREAM, imageUri);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(Intent.createChooser(intent, "把二维码分享到..."));
     }
 }
+

@@ -26,7 +26,7 @@ public class SettingsActivity extends AppCompatActivity {
             "真密码设置", "伪密码设置","帮助","关于"
     };
     private String[] contents = new String[]{
-            "提高姿势水平", "从未见过如此厚颜无耻之人","还要学习一个","火前留名"
+            "设置进入新世界的真实密码", "设置进入新世界的伪密码","你还需要学习","火前留名"
     };
     private int[] imageIds = new int[]{
             R.drawable.truesecret, R.drawable.fakesecret,R.drawable.help,R.drawable.aboutme

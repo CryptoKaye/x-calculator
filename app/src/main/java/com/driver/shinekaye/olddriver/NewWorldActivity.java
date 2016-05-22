@@ -1,12 +1,19 @@
 package com.driver.shinekaye.olddriver;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Environment;
+import android.support.annotation.BoolRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,13 +30,13 @@ public class NewWorldActivity extends AppCompatActivity {
 
     //初始化列表项
     private String[] titles = new String[] {
-            "自定义二维码","摩斯电码翻译器","设置"
+            "自定义二维码","摩斯电码翻译器","设置","创建隐藏项目"
     };
     private String[] contents = new String[] {
-            "无形飙车，最为致命","拒绝吃枣，拒绝药丸","开车的正确方式"
+            "导出你自己的二维码","通过莫尔斯码密匙交流","密码更改与帮助","隐藏图片、隐藏视频、隐藏笔记"
     };
     private int[] imageIds = new int[] {
-            R.drawable.qrcode,R.drawable.morsecode,R.drawable.settings
+            R.drawable.qrcode,R.drawable.morsecode,R.drawable.settings,R.drawable.pic
     };
 
     @Override
@@ -62,11 +69,20 @@ public class NewWorldActivity extends AppCompatActivity {
                     case 2:
                         startActivity(new Intent(NewWorldActivity.this, SettingsActivity.class));
                         break;
+                    case 3:
+                        startActivity(new Intent(NewWorldActivity.this, SecretAlbumActivity.class));
+                        break;
                 }
 
             }
         });
+
+
+
+
+
     }
+
 
 
 }

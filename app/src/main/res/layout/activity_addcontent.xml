@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:visibility="gone"
+        android:id="@+id/c_img"/>
+
+    <VideoView
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:visibility="gone"
+        android:id="@+id/c_video"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/ettext"
+        android:hint="添加你的笔记内容..."
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:padding="2dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/colorAccent"
+        android:gravity="left"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="保存"
+            android:id="@+id/save"
+            android:textColor="@color/buttonText"
+            android:textSize="25sp"
+            android:background="@color/buttonColor"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="删除"
+            android:id="@+id/delete"
+            android:textColor="@color/buttonText"
+            android:textSize="25sp"
+            android:background="@color/buttonColor"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
